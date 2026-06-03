@@ -1,0 +1,18 @@
+mcs.metadata:
+  componentName: Google Drive - Get file content using id
+kind: TaskDialog
+modelDisplayName: Get file content using id
+modelDescription: Retrieves file content from Google Drive using id
+outputs:
+  - propertyName: Response
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: new_2357.shared_googledrive.b56134533710448a9646e2f2769199e4
+  connectionProperties:
+    mode: Invoker
+
+  operationId: GetFileContent
+
+outputMode: All
+triggerCondition: false

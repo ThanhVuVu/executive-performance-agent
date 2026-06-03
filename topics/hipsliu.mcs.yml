@@ -1,0 +1,41 @@
+mcs.metadata:
+  componentName: hỏi đáp số liệu
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    displayName:
+    triggerQueries:
+      - hỏi số liệu
+      - cập nhật số liệu
+      - số liệu mới nhất
+      - thống kê hôm nay
+      - tình hình số liệu
+      - xem báo cáo số liệu
+      - số liệu hiện tại là gì
+      - cho tôi biết số liệu
+      - có thông tin về số liệu không?
+      - báo cáo thống kê
+
+  actions:
+    - kind: SendActivity
+      id: SendActivity_0n8cRY
+      activity: You can ask questions about statistical data. Please enter your question.
+
+    - kind: Question
+      id: Question_qDxzVY
+      variable: Topic.StatQuestion
+      prompt: What statistical data would you like to know about?
+      entity: StringPrebuiltEntity
+
+    - kind: SendActivity
+      id: sendActivity_TMvqi8
+      activity: Checking knowledge...
+
+    - kind: SendActivity
+      id: SendActivity_VsWW2o
+      activity: "Thank you for your question about statistics: {Topic.StatQuestion}. I will try to provide relevant information."
+
+inputType: {}
+outputType: {}

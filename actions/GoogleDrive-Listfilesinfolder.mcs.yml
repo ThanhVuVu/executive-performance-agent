@@ -1,0 +1,30 @@
+mcs.metadata:
+  componentName: Google Drive - List files in folder
+kind: TaskDialog
+confirmation:
+  activity: Do you want to use this tool?
+  mode: Strict
+
+response:
+  activity:
+  mode: Generated
+
+inputs:
+  - kind: AutomaticTaskInput
+    propertyName: id
+
+modelDisplayName: List files in folder
+modelDescription: List files in a Google Drive folder
+outputs:
+  - propertyName: Response
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: new_2357.shared_googledrive.b56134533710448a9646e2f2769199e4
+  connectionProperties:
+    mode: Invoker
+
+  operationId: ListFolder
+
+outputMode: All
+triggerCondition: false

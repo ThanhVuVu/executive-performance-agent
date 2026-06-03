@@ -1,0 +1,18 @@
+mcs.metadata:
+  componentName: Google Sheets - Get sheets
+kind: TaskDialog
+modelDisplayName: Get sheets
+modelDescription: Retrieves sheet names from a Google Sheet file
+outputs:
+  - propertyName: value
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: new_2357.shared_googlesheet.477334219a654ed2aa68183c411f555b
+  connectionProperties:
+    mode: Invoker
+
+  operationId: GetTables
+
+outputMode: All
+triggerCondition: false

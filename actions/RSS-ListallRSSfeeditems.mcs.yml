@@ -1,0 +1,47 @@
+mcs.metadata:
+  componentName: RSS - List all RSS feed items
+kind: TaskDialog
+inputs:
+  - kind: AutomaticTaskInput
+    propertyName: feedUrl
+
+modelDisplayName: List all RSS feed items
+modelDescription: |-
+  Use this tool when the user provides an RSS feed URL and asks to list, retrieve, read, inspect, or test the items/articles/posts inside that RSS feed.
+
+  This tool requires a specific RSS feed URL as input. It returns RSS feed items such as title, link, published date, author, category, and summary if available.
+
+  Use this tool for requests like:
+  - "List all items from this RSS feed URL"
+  - "Read this RSS feed"
+  - "Test this RSS feed URL"
+  - "Show latest RSS items from https://example.com/rss"
+  - "Liệt kê các bài viết trong RSS feed này"
+  - "Đọc RSS feed từ URL này"
+  - "Test RSS feed URL này"
+
+  Do not use this tool to list all configured RSS feed sources. If the user asks to list all RSS feed sources without providing a URL, ask for the RSS feed URL or use a separate configured RSS source registry tool if available.
+outputs:
+  - propertyName: Response
+    description: |-
+      RSS feed items returned from the provided RSS feed URL.
+
+      Each item may include:
+      - title
+      - link
+      - published date
+      - summary or description
+      - author
+      - category
+      - source feed URL
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: new_2357.shared_rss.bf4638348776492dbdaadda2b8e0bb75
+  connectionProperties:
+    mode: Invoker
+
+  operationId: ListFeedItems
+
+outputMode: All
+triggerCondition: true

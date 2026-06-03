@@ -1,0 +1,60 @@
+mcs.metadata:
+  componentName: Data check
+kind: AdaptiveDialog
+modelDescription: "This tool can handle queries like these: data check, verify my data, is my information correct, check my details, validate data, list files in my folder in drive"
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - data check
+      - verify my data
+      - is my information correct
+      - check my details
+      - validate data
+      - review my info
+      - confirm my records
+      - are my details accurate
+      - update data check
+
+  actions:
+    - kind: Question
+      id: question_M3wcPZ
+      interruptionPolicy:
+        allowInterruption: true
+
+      variable: init:Topic.response
+      prompt: What do you want to know about the data?
+      entity: StringPrebuiltEntity
+
+    - kind: SendActivity
+      id: SendActivity_P4224i
+      activity: Let me check.....
+
+    - kind: InvokeAIBuilderModelAction
+      id: invokeAIBuilderModelAction_8ZyNq0
+      input:
+        binding:
+          Text_20input: =Topic.response
+
+      output:
+        binding:
+          predictionOutput: Topic.intent
+
+      aIModelId: e61e5c71-e644-4b52-a7df-55952ba511bf
+
+    - kind: ConditionGroup
+      id: conditionGroup_NeAVNs
+      conditions:
+        - id: conditionItem_b0LGf5
+          condition: =Topic.intent.text = "hr_summary"
+          actions:
+            - kind: BeginDialog
+              id: CkFfBF
+              dialog: new_2357.action.GoogleDrive-Listfilesinfolder
+
+    - kind: EndDialog
+      id: JBl4ix
+
+inputType: {}
+outputType: {}

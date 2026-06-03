@@ -1,0 +1,16 @@
+mcs.metadata:
+  componentName: Custom prompt 5/27/2026, 10:52:44 AM
+kind: TaskDialog
+inputs:
+  - kind: AutomaticTaskInput
+    propertyName: text
+    name: text
+    shouldPromptUser: true
+
+modelDisplayName: Custom prompt 5/27/2026, 10:52:44 AM
+modelDescription: Custom prompt 5/27/2026, 10:52:44 AM
+action:
+  kind: InvokeAIBuilderModelTaskAction
+  aIModelId: 16e9b337-9f96-4f17-a5aa-74d3325799e1
+
+outputMode: All

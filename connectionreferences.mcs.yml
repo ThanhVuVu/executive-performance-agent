@@ -1,0 +1,11 @@
+﻿connectionReferences:
+  - connectionReferenceLogicalName: new_2357.shared_a365copilotchatmcp.shared-a365copilotch-8a97d050-a2e3-4b39-97d3-988c5658fca1
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_a365copilotchatmcp
+  - connectionReferenceLogicalName: new_2357.shared_a365memcp.shared-a365memcp-ed27f9d6-1f5c-41db-be76-f514f5bbf484
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_a365memcp
+  - connectionReferenceLogicalName: new_2357.shared_googledrive.b56134533710448a9646e2f2769199e4
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_googledrive
+  - connectionReferenceLogicalName: new_2357.shared_googlesheet.477334219a654ed2aa68183c411f555b
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_googlesheet
+  - connectionReferenceLogicalName: new_2357.shared_rss.bf4638348776492dbdaadda2b8e0bb75
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_rss

@@ -1,0 +1,37 @@
+mcs.metadata:
+  componentName: Google Drive - Get file metadata using id
+kind: TaskDialog
+modelDisplayName: Get file metadata using id
+modelDescription: Retrieves file metadata from Google Drive using id
+outputs:
+  - propertyName: DisplayName
+
+  - propertyName: ETag
+
+  - propertyName: FileLocator
+
+  - propertyName: Id
+
+  - propertyName: IsFolder
+
+  - propertyName: LastModified
+
+  - propertyName: LastModifiedBy
+
+  - propertyName: MediaType
+
+  - propertyName: Name
+
+  - propertyName: Path
+
+  - propertyName: Size
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: new_2357.shared_googledrive.b56134533710448a9646e2f2769199e4
+  connectionProperties:
+    mode: Invoker
+
+  operationId: GetFileMetadata
+
+outputMode: All
